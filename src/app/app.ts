@@ -1,12 +1,10 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { ProfileEditorComponent } from './profile-editor/profile-editor';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [ProfileEditorComponent],
+  template: '<app-profile-editor></app-profile-editor>'
 })
-export class App {
-  protected readonly title = signal('mean-test');
-}
+export Class AppComponent {}
