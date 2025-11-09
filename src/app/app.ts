@@ -7,4 +7,4 @@ import { ProfileEditorComponent } from './profile-editor/profile-editor';
   imports: [ProfileEditorComponent],
   template: '<app-profile-editor></app-profile-editor>'
 })
-export Class AppComponent {}
+export class AppComponent {}

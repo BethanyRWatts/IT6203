@@ -1,13 +1,14 @@
 // src/app/profile-editor/profile-editor.component.ts
 import { Component } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
   selector: 'app-profile-editor',
   templateUrl: './profile-editor.html',
   styleUrls: ['./profile-editor.css'],
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
 })
 export class ProfileEditorComponent {
   profileForm: FormGroup;
@@ -52,7 +53,10 @@ export class ProfileEditorComponent {
     cityControl?.setValue('');
   }
 }
-  get aliases(): FormArray {
+onSubmit(): void {
+  console.log(this.profileForm.value);
+}  
+get aliases(): FormArray {
     return this.profileForm.get('aliases') as FormArray;
   }
 
